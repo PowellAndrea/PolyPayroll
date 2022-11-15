@@ -1,0 +1,15 @@
+E:\_SourceCode\PolyPayroll-1\PolyPayroll-1\obj\Debug\net6.0\PolyPayroll-1.csproj.AssemblyReference.cache
+E:\_SourceCode\PolyPayroll-1\PolyPayroll-1\obj\Debug\net6.0\PolyPayroll-1.GeneratedMSBuildEditorConfig.editorconfig
+E:\_SourceCode\PolyPayroll-1\PolyPayroll-1\obj\Debug\net6.0\PolyPayroll-1.AssemblyInfoInputs.cache
+E:\_SourceCode\PolyPayroll-1\PolyPayroll-1\obj\Debug\net6.0\PolyPayroll-1.AssemblyInfo.cs
+E:\_SourceCode\PolyPayroll-1\PolyPayroll-1\obj\Debug\net6.0\PolyPayroll-1.csproj.CoreCompileInputs.cache
+E:\_SourceCode\PolyPayroll-1\PolyPayroll-1\bin\Debug\net6.0\PolyPayroll-1.exe
+E:\_SourceCode\PolyPayroll-1\PolyPayroll-1\bin\Debug\net6.0\PolyPayroll-1.deps.json
+E:\_SourceCode\PolyPayroll-1\PolyPayroll-1\bin\Debug\net6.0\PolyPayroll-1.runtimeconfig.json
+E:\_SourceCode\PolyPayroll-1\PolyPayroll-1\bin\Debug\net6.0\PolyPayroll-1.dll
+E:\_SourceCode\PolyPayroll-1\PolyPayroll-1\bin\Debug\net6.0\PolyPayroll-1.pdb
+E:\_SourceCode\PolyPayroll-1\PolyPayroll-1\obj\Debug\net6.0\PolyPayroll-1.dll
+E:\_SourceCode\PolyPayroll-1\PolyPayroll-1\obj\Debug\net6.0\refint\PolyPayroll-1.dll
+E:\_SourceCode\PolyPayroll-1\PolyPayroll-1\obj\Debug\net6.0\PolyPayroll-1.pdb
+E:\_SourceCode\PolyPayroll-1\PolyPayroll-1\obj\Debug\net6.0\PolyPayroll-1.genruntimeconfig.cache
+E:\_SourceCode\PolyPayroll-1\PolyPayroll-1\obj\Debug\net6.0\ref\PolyPayroll-1.dll
