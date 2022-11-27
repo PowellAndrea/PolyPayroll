@@ -2,7 +2,7 @@
 
 namespace PolyPayroll_1
 {
-	internal class Invoice : IPayable
+	public class Invoice : IPayable
 	{
 		private string _InvoiceID { get; }
 		private string _PartNumber { get;}
@@ -16,29 +16,19 @@ namespace PolyPayroll_1
 			_PartDescription	= partDescription;
 			_Price = price;
 			_Quantity = quantity;
-			_InvoiceID = NewInvoiceID();
+			_InvoiceID = new Random().Next(100000, 900000) + "_" + _PartNumber;
 		}
 
-		internal string NewInvoiceID()
-		{
-			Random r = new Random();
-			return r.Next(100000, 900000) + "_" + _PartNumber;
-		}
-
-		public decimal GetPayableAmount()
-		{
-			return _Price * _Quantity;
-		}
+		public decimal PayableAmount => _Price * _Quantity;
 
 		public override string ToString()
 		{
 			string message = "Invoice: " + _InvoiceID + "\n"
-				+ "Quantity: " + _Quantity + "\n"
+				+ "Quantity:		 " + _Quantity + "\n"
 				+ "Description:    " + _PartDescription + "\n"
 				+ "Unit Price:     " + _Price.ToString("C", CultureInfo.CurrentCulture) + "\n"
-				+ "Extended Price: " + GetPayableAmount().ToString("C",CultureInfo.CurrentCulture) +"\n";
+				+ "Extended Price: " + PayableAmount.ToString("C",CultureInfo.CurrentCulture) +"\n";
 			return message;
 		}
-
 	}
 }

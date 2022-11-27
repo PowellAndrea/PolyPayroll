@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\_SourceCode\\PolyPayroll-1\\PolyPayroll-1\\PolyPayroll.csproj",
-      "projectName": "PolyPayroll",
-      "projectPath": "E:\\_SourceCode\\PolyPayroll-1\\PolyPayroll-1\\PolyPayroll.csproj",
+      "projectUniqueName": "E:\\_SourceCode\\PolyPayroll-1\\PolyPayroll-1\\Payables.csproj",
+      "projectName": "Payables",
+      "projectPath": "E:\\_SourceCode\\PolyPayroll-1\\PolyPayroll-1\\Payables.csproj",
       "packagesPath": "C:\\Users\\Andrea\\.nuget\\packages\\",
       "outputPath": "E:\\_SourceCode\\PolyPayroll-1\\PolyPayroll-1\\obj\\",
       "projectStyle": "PackageReference",

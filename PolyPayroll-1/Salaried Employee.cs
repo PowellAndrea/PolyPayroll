@@ -2,7 +2,7 @@
 
 namespace PolyPayroll_1
 {
-	internal class Salaried_Employee : Employee
+	public class Salaried_Employee : Employee, IPayable
 	{
 		private decimal _WeeklySalary;
 
@@ -12,19 +12,16 @@ namespace PolyPayroll_1
 			_WeeklySalary= weeklySalary;
 		}
 
-		public override decimal GetPayableAmount()
-		{
-			// Will this handle multiple quantity of weeks?
-			return _WeeklySalary;
-		}
+		public decimal PayableAmount => Earnings;
+
+		private decimal Earnings => _WeeklySalary;
+
 
 		public override string ToString()
 		{
 			string message = base.ToString()
 				+ "Weekly Salary: " + _WeeklySalary.ToString("C", CultureInfo.CurrentCulture) + "\n"
-				+ "Earned:        " + GetPayableAmount().ToString("C", CultureInfo.CurrentCulture)
-				+ "\n";
-
+				+ "Earned:        " + Earnings.ToString("C", CultureInfo.CurrentCulture)	+ "\n";
 			return message;
 		}
 

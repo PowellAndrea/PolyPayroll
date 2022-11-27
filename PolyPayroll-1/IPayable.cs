@@ -2,7 +2,7 @@
 {
 	internal interface IPayable
 	{
-		public decimal GetPayableAmount();
+		public decimal PayableAmount { get; }
 	}
 
 	public enum PayrollType

@@ -1,0 +1,15 @@
+E:\_SourceCode\PolyPayroll-1\PolyPayroll-1\bin\Debug\net6.0\Payables.exe
+E:\_SourceCode\PolyPayroll-1\PolyPayroll-1\bin\Debug\net6.0\Payables.deps.json
+E:\_SourceCode\PolyPayroll-1\PolyPayroll-1\bin\Debug\net6.0\Payables.runtimeconfig.json
+E:\_SourceCode\PolyPayroll-1\PolyPayroll-1\bin\Debug\net6.0\Payables.dll
+E:\_SourceCode\PolyPayroll-1\PolyPayroll-1\bin\Debug\net6.0\Payables.pdb
+E:\_SourceCode\PolyPayroll-1\PolyPayroll-1\obj\Debug\net6.0\Payables.csproj.AssemblyReference.cache
+E:\_SourceCode\PolyPayroll-1\PolyPayroll-1\obj\Debug\net6.0\Payables.GeneratedMSBuildEditorConfig.editorconfig
+E:\_SourceCode\PolyPayroll-1\PolyPayroll-1\obj\Debug\net6.0\Payables.AssemblyInfoInputs.cache
+E:\_SourceCode\PolyPayroll-1\PolyPayroll-1\obj\Debug\net6.0\Payables.AssemblyInfo.cs
+E:\_SourceCode\PolyPayroll-1\PolyPayroll-1\obj\Debug\net6.0\Payables.csproj.CoreCompileInputs.cache
+E:\_SourceCode\PolyPayroll-1\PolyPayroll-1\obj\Debug\net6.0\Payables.dll
+E:\_SourceCode\PolyPayroll-1\PolyPayroll-1\obj\Debug\net6.0\refint\Payables.dll
+E:\_SourceCode\PolyPayroll-1\PolyPayroll-1\obj\Debug\net6.0\Payables.pdb
+E:\_SourceCode\PolyPayroll-1\PolyPayroll-1\obj\Debug\net6.0\Payables.genruntimeconfig.cache
+E:\_SourceCode\PolyPayroll-1\PolyPayroll-1\obj\Debug\net6.0\ref\Payables.dll

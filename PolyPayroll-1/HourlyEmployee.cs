@@ -3,7 +3,7 @@ using System.Globalization;
 
 namespace PolyPayroll_1
 {
-	public class HourlyEmployee : Employee
+	public class HourlyEmployee : Employee, IPayable
 	{
 		private decimal _HourlyWage;
 		private decimal _HoursWorked;
@@ -15,23 +15,18 @@ namespace PolyPayroll_1
 			_HoursWorked= hoursWorked;
 		}
 
-		private decimal Earnings()
-		{
-			return (_HourlyWage * _HoursWorked);
-		}
+		public decimal PayableAmount => Earnings;
+
+		private decimal Earnings => _HourlyWage * _HoursWorked;
 
 		public override string ToString()
 		{
 			string message = base.ToString()
 				+ "Hourly wage:  " + _HourlyWage.ToString("C", CultureInfo.CurrentCulture) + "\n"
 				+ "Hours Worked: " + _HoursWorked + "\n"
-				+ "Earnings:     " + Earnings().ToString("C",CultureInfo.CurrentCulture) + "\n";
+				+ "Earnings:     " + Earnings.ToString("C",CultureInfo.CurrentCulture) + "\n";
 			return message;
 		}
 
-		public override decimal GetPayableAmount()
-		{
-			return Earnings();
-		}
 	}
 }
