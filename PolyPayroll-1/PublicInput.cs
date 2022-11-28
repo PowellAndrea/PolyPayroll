@@ -40,6 +40,7 @@ namespace PolyPayroll_1
 			Console.WriteLine("Hourly Wage:\t");
 			decimal HourlyWage = Decimal.Parse(Console.ReadLine());
 			Console.WriteLine("Hours Worked:\t");
+			// Should add better error checking here
 			int HoursWorked = int.Parse(Console.ReadLine());
 			
 			newPayable = new HourlyEmployee(FirstName, LastName, SSN, HourlyWage, HoursWorked);

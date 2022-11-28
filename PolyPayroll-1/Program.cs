@@ -20,30 +20,17 @@ Invoice Thing2 = new("Thing", "This is a blue thing.", (decimal)3.0, 3);
 Invoice Thing3 = new("Thing", "This is a green thing.", (decimal)10.00, 4);
 Payout.AddRange(new[] { Thing1, Thing2, Thing3 });
 
-//Console.WriteLine(Joe.ToString());
-//Console.WriteLine(Burton.ToString());
-//Console.WriteLine(William.ToString());
-
-//Console.WriteLine(Amber.ToString());
-//Console.WriteLine(Violet.ToString());
-//Console.WriteLine(Jessica.ToString());
-
-//Console.WriteLine(Thing1.ToString());
-//Console.WriteLine(Thing2.ToString());
-//Console.WriteLine(Thing3.ToString());
 #endregion
 
 bool Continue = true;
 
-#region Show Menu
-while (Continue)
+while (Continue)	// Show Menu
 {
 	Console.WriteLine("Please select from the following:\n"
 	+ "1 Pay a Salaried Employee\n"
 	+ "2 Pay an Hourly Employee \n"
 	+ "3 Pay an Invoice\n"
-	+ "4 Show Weekly Detail\n"
-	+ "6 Show Weekly Summary\n"
+	+ "4 Show Weekly Payout\n"
 	+ "5 End"
 	);
 	Continue = doStuff(Payout, Continue);
@@ -73,21 +60,24 @@ static bool doStuff(List<IPayable> Payout, bool Continue)
 
 		case "4":   // Show Weekly Detail
 			{
+				decimal sum = 0;
+
 				var groupBy = from payable in Payout
 								  group payable by payable.GetType().Name into newGroup
 								  orderby newGroup.Key
 								  select newGroup;
 
-				decimal sum = groupBy.Sum();
-				Console.WriteLine(" Total Weekly Payout: " + sum);
-				
-	
-				foreach (IPayable payable in groupBy)
+				Console.WriteLine("********** Weekly Payout Detail **********\n");
+				foreach (IPayable item in Payout)
 				{
-					Console.WriteLine(payable.ToString());
+					Console.WriteLine(item.ToString());
 				}
 
+				Console.WriteLine("********** Weekly Payout Summary **********\n");
+				Console.WriteLine(" Total Weekly Payout: " + sum + "\n\n");
 
+				Console.WriteLine("press any key to continue .....\n\n");
+				Console.ReadKey();
 				break;
 			}
 
@@ -100,5 +90,3 @@ static bool doStuff(List<IPayable> Payout, bool Continue)
 
 	return Continue;
 }
-#endregion
-
