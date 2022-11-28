@@ -5,9 +5,9 @@ namespace PolyPayroll_1
 	public class PublicInput
 	{
 
-		public static Salaried_Employee paySalaryEmployee()
+		public static SalaryEmployee paySalaryEmployee()
 		{
-			Salaried_Employee newPayable;
+			SalaryEmployee newPayable;
 
 			Console.WriteLine("First Name:\t");
 			string FirstName = Console.ReadLine();
@@ -21,7 +21,7 @@ namespace PolyPayroll_1
 			Console.WriteLine("Weekly Salary:\t");
 			decimal weeklySalary = Decimal.Parse(Console.ReadLine());
 
-			newPayable = new Salaried_Employee(FirstName,LastName,SSN,weeklySalary);
+			newPayable = new SalaryEmployee(FirstName,LastName,SSN,weeklySalary);
 			
 			return newPayable;
 

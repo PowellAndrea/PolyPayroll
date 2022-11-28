@@ -2,7 +2,7 @@
 
 namespace PolyPayroll_1
 {
-	public class Salaried_Employee : Employee
+	public class SalaryEmployee : Employee
 	{
 		private decimal _WeeklySalary;
 
@@ -11,7 +11,7 @@ namespace PolyPayroll_1
 			return _WeeklySalary;
 		}
 
-		public Salaried_Employee(string firstName, string lastName, string SSN, decimal weeklySalary) 
+		public SalaryEmployee(string firstName, string lastName, string SSN, decimal weeklySalary) 
 			: base(firstName, lastName, SSN, PayrollType.Salaried)
 		{
 			_WeeklySalary= weeklySalary;

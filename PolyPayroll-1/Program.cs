@@ -11,9 +11,9 @@ HourlyEmployee Burton = new("Burton", "Waller", "100-00-0002", 20, 40);
 HourlyEmployee William = new("William", "Shatner", "100-00-0003", 30, 40);
 Payout.AddRange(new[] { Joe, Burton, William });
 
-Salaried_Employee Amber = new("Amber", "Bluefish", "200-00-0001", 1000);
-Salaried_Employee Violet = new("Violet", "Strong", "200-00-0002", 2000);
-Salaried_Employee Jessica = new("Jessica", "Seezu", "200-00-0003", 3000);
+SalaryEmployee Amber = new("Amber", "Bluefish", "200-00-0001", 1000);
+SalaryEmployee Violet = new("Violet", "Strong", "200-00-0002", 2000);
+SalaryEmployee Jessica = new("Jessica", "Seezu", "200-00-0003", 3000);
 Payout.AddRange(new[] { Amber, Jessica, Violet });
 
 Invoice Thing1 = new("Thing", "This is a red thing.", (decimal)2.0, 2);
