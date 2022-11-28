@@ -1,6 +1,7 @@
 ﻿using PolyPayroll_1;
 using System.Collections.Generic;
 using System.Linq;
+using System.Globalization;
 
 List<IPayable> Payout = new();
 #region Populate with sample data
@@ -40,7 +41,7 @@ static bool doStuff(List<IPayable> Payout, bool Continue)
 {
 	switch (Console.ReadLine())
 	{
-		case "1":
+		case "1":	// Pay a Salaried Employee
 			{
 				Payout.Add(PublicInput.paySalaryEmployee());
 				break;
@@ -58,23 +59,38 @@ static bool doStuff(List<IPayable> Payout, bool Continue)
 				break;
 			}
 
-		case "4":   // Show Weekly Detail
+		case "4":   // Show Weekly Payout
 			{
-				decimal sum = 0;
+				decimal weeklyTotal = 0;
+				decimal subTotal = 0;
+				string message = string.Empty;
 
 				var groupBy = from payable in Payout
-								  group payable by payable.GetType().Name into newGroup
-								  orderby newGroup.Key
+								  group payable by payable.GetType() into newGroup
+								  //orderby newGroup.Key
 								  select newGroup;
 
 				Console.WriteLine("********** Weekly Payout Detail **********\n");
-				foreach (IPayable item in Payout)
+				foreach (var group in groupBy)
 				{
-					Console.WriteLine(item.ToString());
+					subTotal = 0;
+					foreach (var thing in group)
+					{
+						Console.WriteLine(thing.ToString());
+						subTotal += thing.PayableAmount;
+					}
+					weeklyTotal += subTotal;
+					message
+						= "\t" + group.Key.Name + ": "
+						+ subTotal.ToString("C", CultureInfo.CurrentCulture) +"\n"
+						+ message;
 				}
 
 				Console.WriteLine("********** Weekly Payout Summary **********\n");
-				Console.WriteLine(" Total Weekly Payout: " + sum + "\n\n");
+				Console.WriteLine("Total Weekly Payout:  "
+					+ weeklyTotal.ToString("C", CultureInfo.CurrentCulture) +"\n"
+					+ "Category Breakdown:\n"
+					+ message);
 
 				Console.WriteLine("press any key to continue .....\n\n");
 				Console.ReadKey();
@@ -82,8 +98,10 @@ static bool doStuff(List<IPayable> Payout, bool Continue)
 			}
 
 		case "5":   // End
-			Continue = false;
-			break;
+			{
+				Continue = false;
+				break;
+			}
 
 		default: break;
 	}

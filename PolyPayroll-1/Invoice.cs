@@ -11,6 +11,7 @@ namespace PolyPayroll_1
 		public decimal _Price { get;}
 
 		public decimal PayableAmount => _Price * _Quantity;
+		public PayrollType PayrollType = PayrollType.Invoice;
 
 		public Invoice(string partNumber, string partDescription, decimal price, int quantity)
 		{
@@ -24,7 +25,8 @@ namespace PolyPayroll_1
 
 		public override string ToString()
 		{
-			string message = "Invoice: " + _InvoiceID + "\n"
+			string message = 
+				  "Invoice:        " + _InvoiceID + "\n"
 				+ "Quantity:		 " + _Quantity + "\n"
 				+ "Description:    " + _PartDescription + "\n"
 				+ "Unit Price:     " + _Price.ToString("C", CultureInfo.CurrentCulture) + "\n"

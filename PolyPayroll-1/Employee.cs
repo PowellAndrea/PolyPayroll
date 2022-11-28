@@ -5,7 +5,7 @@
 		private string _FirstName { get; }
 		private string _LastName { get; }
 		private string _SSN { get; }
-		private PayrollType _Type { get; }
+		public PayrollType _Type { get; }
 		
 		public decimal PayableAmount => Earnings();
 
