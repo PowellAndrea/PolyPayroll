@@ -2,13 +2,15 @@
 
 namespace PolyPayroll_1
 {
-	public class Invoice : IPayable
+	 public class Invoice : IPayable
 	{
-		private string _InvoiceID { get; }
-		private string _PartNumber { get;}
-		private int		_Quantity { get;}
-		private string _PartDescription { get;}
-		private decimal _Price { get;}
+		public string _InvoiceID { get; }
+		public string _PartNumber { get;}
+		public int		_Quantity { get;}
+		public string _PartDescription { get;}
+		public decimal _Price { get;}
+
+		public decimal PayableAmount => _Price * _Quantity;
 
 		public Invoice(string partNumber, string partDescription, decimal price, int quantity)
 		{
@@ -19,7 +21,6 @@ namespace PolyPayroll_1
 			_InvoiceID = new Random().Next(100000, 900000) + "_" + _PartNumber;
 		}
 
-		public decimal PayableAmount => _Price * _Quantity;
 
 		public override string ToString()
 		{

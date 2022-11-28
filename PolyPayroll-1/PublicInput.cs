@@ -41,14 +41,15 @@ namespace PolyPayroll_1
 			decimal HourlyWage = Decimal.Parse(Console.ReadLine());
 			Console.WriteLine("Hours Worked:\t");
 			int HoursWorked = int.Parse(Console.ReadLine());
+			
 			newPayable = new HourlyEmployee(FirstName, LastName, SSN, HourlyWage, HoursWorked);
-
 			return newPayable;
 		}
 
 		public static Invoice payInvoice()
 		{
-			Invoice newPayable;
+			//Invoice newPayable;
+
 			Console.WriteLine("Enter part number:\t");
 			string partNumber = Console.ReadLine();
 
@@ -61,8 +62,7 @@ namespace PolyPayroll_1
 			Console.WriteLine("\nEntery Quantity");
 			int quantity = int.Parse(Console.ReadLine());
 
-			newPayable = new Invoice(partNumber, partDescription, price, quantity);
-
+			Invoice newPayable = new Invoice(partNumber, partDescription, price, quantity);
 			return newPayable;
 		}
 	}

@@ -1,13 +1,15 @@
 ﻿namespace PolyPayroll_1
 {
-	public abstract class Employee
+	public abstract class Employee : IPayable
 	{
 		private string _FirstName { get; }
 		private string _LastName { get; }
 		private string _SSN { get; }
 		private PayrollType _Type { get; }
+		
+		public decimal PayableAmount => Earnings();
 
-		readonly decimal PayableAmount;
+		public abstract decimal Earnings();
 
 		public Employee(string firstName, string lastName, string SSN, PayrollType type)
 		{

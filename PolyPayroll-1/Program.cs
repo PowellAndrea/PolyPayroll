@@ -1,5 +1,6 @@
 ﻿using PolyPayroll_1;
 using System.Collections.Generic;
+using System.Linq;
 
 List<IPayable> Payout = new();
 #region Populate with sample data
@@ -41,7 +42,8 @@ while (Continue)
 	+ "1 Pay a Salaried Employee\n"
 	+ "2 Pay an Hourly Employee \n"
 	+ "3 Pay an Invoice\n"
-	+ "4 Show Weekly Payout\n"
+	+ "4 Show Weekly Detail\n"
+	+ "6 Show Weekly Summary\n"
 	+ "5 End"
 	);
 	Continue = doStuff(Payout, Continue);
@@ -69,12 +71,23 @@ static bool doStuff(List<IPayable> Payout, bool Continue)
 				break;
 			}
 
-		case "4":   // Show Weekly Payout
+		case "4":   // Show Weekly Detail
 			{
-				foreach (IPayable payable in Payout)
+				var groupBy = from payable in Payout
+								  group payable by payable.GetType().Name into newGroup
+								  orderby newGroup.Key
+								  select newGroup;
+
+				decimal sum = groupBy.Sum();
+				Console.WriteLine(" Total Weekly Payout: " + sum);
+				
+	
+				foreach (IPayable payable in groupBy)
 				{
 					Console.WriteLine(payable.ToString());
 				}
+
+
 				break;
 			}
 
